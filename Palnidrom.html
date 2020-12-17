@@ -1,0 +1,27 @@
+<html>
+    <head><title>Palindrom</title> 
+    </head>
+
+    <body>
+        Upišite riječ: <input type="text" id="text">
+        <input type="submit" value="Provjeri" onclick="Palindrom()">
+        <script type="text/javascript">
+        function Palindrom(){
+            revString = ""; 
+            inpString = document.getElementById("text").value;
+            i = inpString.length;
+
+            for(var j=i; j>=0; j--){
+                revString = revString + inpString.charAt(j);
+            }
+        
+           if(inpString === revString) {
+                alert(inpString+" je palindrom.");
+            }
+            else{
+                alert(inpString+" nije palindrom.");
+            }
+        }
+        </script>
+    </body>
+</html>
